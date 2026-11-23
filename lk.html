@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авангард</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="logo">
+    <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+  </div>
+
+  <!-- Одно меню, скрывать/показывать через CSS и JS -->
+  <div class="menu" id="mainMenu">
+    <a href="index.html" class="button">Главная</a>
+    <a href="afisha.html" class="button">Афиша</a>
+    <a href="news.html" class="button">Новости</a>
+    <a href="about.html" class="button">О театре</a>
+  </div>
+
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<main>
+<h1>Привет, Ольга!</h1>
+<div class="container_news" style="display: flex; align-items: center; max-width: 400px; margin: 0 auto;">
+<div>
+    <p id="zag" style="margin: 20px;">Климова Ольга</p>
+    <p style="margin: 20px;">8-789-789-78-78</p>
+    <a href="index.html" class="button">Сменить изображение</a>
+</div>
+<img src="https://i.pinimg.com/736x/97/6e/3d/976e3ddff4cf700b1449f262cf15865f.jpg" alt="Описание изображения">
+</div>
+<h1>Билеты</h1>
+
+<div class="container_news">
+<img src="node-54.png">
+<div>
+    <p style="margin: 20px;">Мир за гранью 12 января, 19:00, зал 1, место 26</p>
+    <a href="index.html" class="button">Скачать билет</a>
+</div>
+</div>
+
+<div class="container_news">
+<img src="5.jpg.webp">
+<div>
+    <p style="margin: 20px;">Карнавал теней 15 января, 18:30 , зал 2, место 11</p>
+    <a href="index.html" class="button">Скачать билет</a>
+</div>
+</div>
+
+<div class="container_news">
+<img src="node-52.png">
+<div>
+    <p style="margin: 20px;">Тени прошлого 20 января, 19:00 , зал 2, место 35</p>
+    <a href="index.html" class="button">Скачать билет</a>
+</div>
+</div>
+
+</main>
+<footer>
+  <div class="container">
+  <a href="about.html" class="button_footer">О театре</a>
+  <a href="index.html" class="button_footer">Главная</a>
+  </div>
+<div class="contacts-container">
+  <!-- Левый блок с адресом -->
+  <div>
+    <p>
+      Адрес: г. Москва, ул. Театральная, д. 15, корп. 2<br>
+      Телефон: +7 (495) 123-45-67<br>
+      Email: info@avangardtheatre.ru
+    </p>
+  </div>
+  
+  <!-- Правый блок с изображениями -->
+  <div class="right-block">
+    <a href="page2.html"><img src="download-1-32.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="download-2-33.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="rutube.jpg" alt="Логотип"></a>
+  </div>
+</div>
+</footer>
+<script src="burger.js"></script>
+</body>
+</html>

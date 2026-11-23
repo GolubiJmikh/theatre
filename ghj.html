@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exported Figma Design</title>
+
+  <style>
+    header {
+      background-color: #05041D;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content: space-between;
+      position: relative;
+    }
+    /* Логотип слева */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    header img.logo-img {
+      height: 5vh;
+      transition: all 0.2s ease;
+      margin-right: 10px;
+    }
+
+    /* Меню */
+    .menu {
+      display: flex;
+      gap: 10px;
+    }
+    .menu a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0px 5px;
+      background-color: #ffc8c8;
+      color: black;
+      text-decoration: none;
+      border: 1px solid black;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .menu a.button:hover {
+      background-color: #f77575;
+      border: 1px solid gray;
+    }
+
+    /* Бургер кнопка */
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      width: 30px;
+    }
+    .burger span {
+      height: 4px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    /* Стили по умолчанию для десктопа */
+#mainMenu {
+  display: flex;
+  gap: 10px;
+}
+
+/* На мобильных скрываем меню по умолчанию */
+@media(max-width: 768px) {
+  #mainMenu {
+    display: none; /* скрываем на мобильных */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    flex-direction: column;
+    background-color: #05041D;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    border: 1px solid #333;
+  }
+  #mainMenu.show {
+    display: flex; /* показываем при клике */
+  }
+  /* показываем бургер */
+  #burger {
+    display: flex;
+  }
+}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <a href="page2.html"><img src="logo.png" class="logo-img" alt="Логотип"></a>
+  </div>
+
+  <!-- Одно меню, скрывать/показывать через CSS и JS -->
+  <div class="menu" id="mainMenu">
+    <a href="page2.html" class="button">Афиша</a>
+    <a href="page2.html" class="button">О театре</a>
+    <a href="page2.html" class="button">Новости</a>
+    <a href="page2.html" class="button">Контакты</a>
+    <a href="page2.html" class="button">Личный кабинет</a>
+  </div>
+
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mainMenu = document.getElementById('mainMenu');
+
+  burger.addEventListener('click', () => {
+    mainMenu.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+header{
+  background-color: #05041D;
+  display: flex;             /* Включаем Flexbox */
+  align-items: center;       /* Выравниваем по вертикали по центру */
+  padding: 10px;    
+  justify-content: space-between;
+}
+h1{
+  text-align: center;
+  font-size: 30px;
+}
+header img{
+  height: 5vh;
+  transition: all 0.2s ease;
+  margin: 10px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0px 5px;
+  background-color: #ffc8c8;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 20px; 
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #f77575;
+  border: 1px solid gray;
+}
+
+
+  /* Меню */
+    .menu {
+      display: flex;
+      gap: 10px;
+    }
+    .menu a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0px 5px;
+      background-color: #ffc8c8;
+      color: black;
+      text-decoration: none;
+      border: 1px solid black;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .menu a.button:hover {
+      background-color: #f77575;
+      border: 1px solid gray;
+    }
+
+    /* Бургер кнопка */
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      width: 30px;
+    }
+    .burger span {
+      height: 4px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    /* Стили по умолчанию для десктопа */
+#mainMenu {
+  display: flex;
+  gap: 10px;
+}
+
+/* На мобильных скрываем меню по умолчанию */
+@media(max-width: 768px) {
+  #mainMenu {
+    display: none; /* скрываем на мобильных */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    flex-direction: column;
+    background-color: #05041D;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    border: 1px solid #333;
+    z-index: 999; /* чтобы было поверх другого */
+  }
+  #mainMenu.show {
+    display: flex; /* показываем при клике */
+  }
+  /* показываем бургер */
+  #burger {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button_footer {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: #05041D;
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button_footer:hover {
+  background-color: #383838;
+  border: 1px solid gray;
+}
+
+
+.container{
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+
+
+.container img{
+  margin-bottom: 30px;
+}
+
+#as{
+  width: 70%;       /* занимает всю ширину экрана */
+  height: 470px;     /* фиксированная высота */
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+
+  
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+.container_news{
+  display: flex;
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 20px;
+  height: auto;
+}
+
+.container_news img {
+  text-align: center;
+  flex: 0 0 auto; /* фото не растягивается, сохраняем размер */
+  width: 150px; /* или фиксированный размер по желанию */
+  height: auto; /* чтобы сохранялось соотношение сторон */
+  margin-right: 15px; /* отступ справа */
+  border-radius: 10px; /* если хотите скруглить также фото */
+  object-fit: cover; /* чтобы изображение не искажалось */
+}
+.container_news p, .carousel-card p {
+  margin: 0px;
+  font-size: 20px;
+}
+
+#zag{
+  font-weight: bold;
+}
+
+.container_news h3, .carousel-card h3 {
+  margin: 0px;
+  font-size: 15px;
+  text-align: right;
+}
+
+
+@media (max-width: 600px) {
+  .container_news {
+    flex-direction: column; /* стекание в столбик */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+/*todo: слайдер */
+
+
+.slider-container {
+  margin-top: 0px;
+  position: relative;
+  width: 100%;       /* занимает всю ширину экрана */
+  height: 200px;     /* фиксированная высота */
+  overflow: hidden;  /* скрыть выходящие части изображений */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* полностью по ширине */
+  height: 100%; /* по высоте контейнера */
+  z-index: 1;
+}
+
+.background-slides img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* растягиваем по ширине */
+  height: 500px; /* фиксированная высота */
+  object-fit: cover; /* изображение покрывает блок, обрезается лишнее */
+  opacity: 0; /* по умолчанию невидимы */
+  transition: opacity 1s ease;
+}
+
+/* Сделаем видимыми только одну картинку */
+.background-slides img.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+.center-text {
+  position: relative;
+  z-index: 2; /* чтобы быть поверх фона */
+  color: black; /* или другой цвет */
+  font-size: 3em; /* или по желанию */
+  padding: 20px;
+}
+
+
+
+
+
+
+/* footer*/
+
+footer{
+  background-color: #8A0303;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+footer p {
+  color: black;
+  font-size: 20px;
+}
+
+footer img{
+  height: 7vh;
+  width: auto;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.contacts-container {
+    display: flex;
+    align-items: center;
+  }
+.right-block {
+      margin-top: 10px;
+      margin-left: auto; 
+      text-align: right;
+    }
+  /* Правый блок с изображениями будет постоянно справа при широком экране, а при узком — снизу */
+  @media (max-width: 800px) {
+    .contacts-container, .container {
+      flex-direction: column; /* вертикальное расположение элементов */
+      align-items: flex-start; /* чтобы левый блок остался слева */
+    }
+
+  }
+
+#awards{flex: 1 1 300px; /* гибкая ширина с минимальной 300px */
+  max-width: 350px; /* ограничение по ширине, чтобы карточки не растягивались слишком сильно */
+  display: flex;
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10px;
+  align-items: center;
+  margin: 10px; /* уменьшил расстояние между карточками для более компактного вида */
+  box-sizing: border-box; /* чтобы padding учитывался внутри ширины */
+  height: auto}
+
+#awards img{ width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 2100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-button {
+  background-color: #ccc;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  user-select: none;
+  z-index: 1;
+}
+
+.carousel-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-card {
+  text-align: center;
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 15px;
+  flex: 0 0 auto;
+  height: auto; /* фиксированная высота, можно менять */
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+#center {
+  margin: 0px;
+  flex: 0 0 auto; /* фото не растягивается, сохраняем размер */
+  width: 100%; /* или фиксированный размер по желанию */
+  height: auto; /* чтобы сохранялось соотношение сторон */
+  border-radius: 10px; /* если хотите скруглить также фото */
+  object-fit: cover; /* чтобы изображение не искажалось */
+}
+
+#left {text-align: left;}
+
+/* Количество карточек и их ширина в зависимости от экрана */
+
+/* 3 карточки */
+@media (min-width: 1451px) {
+  .carousel-card {
+    width: calc((100% - 4 * 20px) / 3); /* margin 10px слева и справа = 20px на карту; всего 3 карты + 4 маржина = 4*20px */
+  }
+}
+
+/* 2 карточки */
+@media (min-width: 751px) and (max-width: 1450px) {
+  .carousel-card {
+    width: calc((100% - 3 * 20px) / 2);
+  }
+}
+
+/* 1 карточка */
+@media (max-width: 750px) {
+  .carousel-card {
+    width: calc(100% - 2 * 20px);
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-button {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.feedback-form {
+  width: auto;
+  display: flex;
+  flex-direction: column; /* вертикальное расположение элементов */
+  align-items: flex-start; /* выравнивание по левому краю */
+  padding: 10px;
+  margin: 10px;
+}
+
+.feedback-form label {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 300px; /* можно задать ширину по желанию */
+  padding: 8px;
+  box-sizing: border-box; /* чтобы padding не влиял на ширину */
+  border-radius: 20px; 
+}
+
+.feedback-form button {
+  border-radius: 20px; 
+  padding: 8px 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.otz{background-color: white; /* фон карточки */
+  border-radius: 20px; /* скругление углов */
+  overflow: hidden; /* чтобы содержимое не выходило за скругленные углы */
+  padding: 10px; /* внутренние отступы, по желанию */
+  margin: 20px;} 
+
+
+
+  .registration-form {
+    background-color: #ffffff; /* Цвет фона формы */
+    padding: 30px;
+    border-radius: 15px;       /* Закруглённые углы */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Тень */
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }

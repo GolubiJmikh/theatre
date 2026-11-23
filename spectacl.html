@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авангард</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="logo">
+    <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+  </div>
+
+  <!-- Одно меню, скрывать/показывать через CSS и JS -->
+  <div class="menu" id="mainMenu">
+    <a href="index.html" class="button">Главная</a>
+    <a href="afisha.html" class="button">Афиша</a>
+    <a href="news.html" class="button">Новости</a>
+    <a href="about.html" class="button">О театре</a>
+    <a href="lk.html" class="button">Личный кабинет</a>
+  </div>
+
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<main>
+<h1>Карнавал теней</h1>
+<div class="container"><img src="5.jpg.webp" id="as"></div>
+<div class="right-block"><a href="page2.html" class="button">Купить билет</a></div>
+<p style="font-size: 20px; margin-left: 20px;">Продолжительность 2 часа 30 минут, билеты от 1500 рублей</p>
+<div class="container_news">
+<div>
+<p>«Карнавал теней» — это мистика, фантастика и экспериментальный театр, рассказывающий о загадочном городе Тенесса, где граница между миром живых и теней размыта. Когда солнце заходит за горизонт, начинается магический карнавал — вечеринка оживших теней, которые выходят из своих углов и начинают рассказывать свои уникальные истории.
+В центре событий — молодой исследователь по имени Алексей, случайно обнаруживший древний амулет, способный вызывать тени. Он приходит в этот загадочный город, чтобы раскрыть тайны древней картины, спрятанной в старой библиотеке. Но ночью в городе начинают оживать тени — каждая из них это отдельная личность со своей историей, переживаниями и мечтами.</p>
+</div>
+</div>
+
+<h1>Отзывы</h1>
+<form class="feedback-form">
+  <label for="nickname">Ваше имя:</label>
+  <input type="text" id="nickname" name="nickname" placeholder="Введите ваше имя">
+
+  <label for="message">Сообщение:</label>
+  <textarea id="message" name="message" rows="4" placeholder="Введите ваш отзыв"></textarea>
+
+  <button type="submit">Оставить отзыв</button>
+</form>
+
+<div class="container_news">
+    <div>
+        <p id="zag" style="margin-left: 20px;">Ирина Петрова</p>
+        <div class="otz">
+        <p>Визуальные эффекты, игра теней и света создавали ощущение, будто я попала в магический мир. Особенно тронули истории теней — такие трогательные и искренние. Невероятное впечатление, обязательно приду снова!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container_news">
+    <div>
+        <p id="zag" style="margin-left: 20px;">Алексей Иванов</p>
+        <div class="otz">
+        <p>Очень необычное и экспериментальное представление. Игра теней — настоящее произведение искусства! Особенно запомнилась сцена с объединением теней перед финалом. Атмосфера волшебства и тайны держала в напряжении всё время. Рекомендую любителям мистики и фантастики!</p>
+        </div>
+    </div>
+</div>
+
+</main>
+<footer>
+  <div class="container">
+  <a href="about.html" class="button_footer">О театре</a>
+  <a href="index.html" class="button_footer">Главная</a>
+  </div>
+<div class="contacts-container">
+  <!-- Левый блок с адресом -->
+  <div>
+    <p>
+      Адрес: г. Москва, ул. Театральная, д. 15, корп. 2<br>
+      Телефон: +7 (495) 123-45-67<br>
+      Email: info@avangardtheatre.ru
+    </p>
+  </div>
+  
+  <!-- Правый блок с изображениями -->
+  <div class="right-block">
+    <a href="page2.html"><img src="download-1-32.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="download-2-33.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="rutube.jpg" alt="Логотип"></a>
+  </div>
+</div>
+</footer>
+<script src="burger.js"></script>
+</body>
+
+</html>

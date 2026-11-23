@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авангард</title>
+    <style>
+
+</style>
+</head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="logo">
+    <a href="index.html"><img src="logo.png" alt="Логотип"></a>
+  </div>
+
+  <!-- Одно меню, скрывать/показывать через CSS и JS -->
+  <div class="menu" id="mainMenu">
+    <a href="index.html" class="button">Главная</a>
+    <a href="afisha.html" class="button">Афиша</a>
+    <a href="news.html" class="button">Новости</a>
+    <a href="about.html" class="button">О театре</a>
+  </div>
+
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<main>
+<form class="registration-form" action="#" method="post" style="display: flex; align-items: center; flex-direction: column;margin: 0 auto;">
+  <h2>Вход</h2>
+
+  <div class="form-group">
+    <label for="login">Логин:</label>
+    <input type="text" id="login" name="login" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <div class="form-group">
+    <button type="submit">Войти</button>
+  </div>
+  <div> <p id="zag">Нет аккаунта?</p> <button type="submit">Зарегистрироваться</button></div>
+</form>
+
+</main>
+<footer>
+  <div class="container">
+  <a href="about.html" class="button_footer">О театре</a>
+  <a href="index.html" class="button_footer">Главная</a>
+  </div>
+<div class="contacts-container">
+  <!-- Левый блок с адресом -->
+  <div>
+    <p>
+      Адрес: г. Москва, ул. Театральная, д. 15, корп. 2<br>
+      Телефон: +7 (495) 123-45-67<br>
+      Email: info@avangardtheatre.ru
+    </p>
+  </div>
+  
+  <!-- Правый блок с изображениями -->
+  <div class="right-block">
+    <a href="page2.html"><img src="download-1-32.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="download-2-33.png" alt="Логотип"></a>
+    <a href="page2.html"><img src="rutube.jpg" alt="Логотип"></a>
+  </div>
+</div>
+</footer>
+<script src="burger.js"></script>
+</body>
+</html>
